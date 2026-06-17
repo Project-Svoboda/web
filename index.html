@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свободный Интернет — Обход Блокировок</title>
+    <meta name="description" content="Официальный сайт проекта по обеспечению свободы интернета и обходу блокировок. Скачать приложение для Android и доступ к зеркалам.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="logo">Project «Svoboda»</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Скачать</a></li>
+                <li><a href="#mirrors">Зеркала</a></li>
+                <li><a href="#cloud-storage">Облако</a></li>
+                <li><a href="#donate">Поддержать</a></li> <!-- Добавили пункт меню -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Главный экран (Hero) с кнопкой скачивания -->
+        <section id="hero">
+            <h1>Верните доступ к свободному интернету</h1>
+            <p>Надежный инструмент для обхода блокировок. Безопасно, быстро и бесплатно.</p>
+            
+            <!-- Блок загрузки текущего приложения -->
+            <div class="download-container">
+                <a href="https://example.com" class="btn btn-main">
+                    Скачать для Android (.APK)
+                </a>
+                <p class="app-version">Версия 1.0.0 | Разрешены внешние источники</p>
+            </div>
+
+            <!-- Задел на будущее для ПК и других ОС -->
+            <div class="coming-soon">
+                <span class="badge">Скоро:</span>
+                <span class="disabled-os">Версия для Windows</span>
+                <span class="disabled-os">Версия для macOS</span>
+            </div>
+        </section>
+
+        <!-- Ссылки на официальные зеркала сайта -->
+        <section id="mirrors">
+            <h2>Официальные зеркала сайта</h2>
+            <p>Если основной домен заблокируют, используйте эти адреса для доступа к обновлениям:</p>
+            <ul class="mirrors-list">
+                <li><a href="https://projectname.onion" target="_blank" rel="noopener">Зеркало сайта №1</a></li>
+            </ul>
+        </section>
+
+        <!-- Ссылки на облачные хранилища -->
+        <section id="cloud-storage">
+            <h2>Резервные хранилища и полезные ресурсы</h2>
+            <p>Здесь вы можете скачать наши приложения и сторонние утилиты для интернет-свободы, если сайт недоступен:</p>
+            <div class="cloud-grid">
+                <div class="cloud-card">
+                    <h3>Google Drive</h3>
+                    <p>Актуальные приложения и новости.</p>
+                    <a href="https://google.com..." target="_blank" rel="noopener" class="btn-link">Перейти в облако</a>
+                </div>
+                <div class="cloud-card">
+                    <h3>MEGA</h3>
+                    <p>Резервный архив №1.</p>
+                    <a href="https://mega.nz..." target="_blank" rel="noopener" class="btn-link">Перейти в облако</a>
+                </div>
+                <div class="cloud-card">
+                    <h3>DropBox</h3>
+                    <p>Резервный архив №2.</p>
+                    <a href="https://github.com..." target="_blank" rel="noopener" class="btn-link">Перейти в облако</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция поддержки проекта (Донаты — 6 кошельков) -->
+        <section id="donate">
+            <h2>Поддержать проект</h2>
+            <p>Мы развиваем проект бесплатно и на чистом энтузиазме. Ваши донаты помогают оплачивать инфраструктуру и зеркала для обхода блокировок:</p>
+            
+            <div class="crypto-grid">
+                <!-- 1. Bitcoin -->
+                <div class="crypto-card">
+                    <div class="crypto-info">
+                        <span class="crypto-name">Bitcoin (BTC)</span>
+                        <span class="crypto-network">Сеть: Bitcoin</span>
+                    </div>
+                    <input type="text" value="bc1qj8kshv2cl37rzwahetgggu3kzjwmuur04a9l5s" readonly class="crypto-address">
+                    <button class="btn-copy" onclick="copyAddress(this, 'bc1qj8kshv2cl37rzwahetgggu3kzjwmuur04a9l5s')">Копировать</button>
+                </div>
+
+                <!-- 2. Tether USDT -->
+                <div class="crypto-card">
+                    <div class="crypto-info">
+                        <span class="crypto-name">Tether (USDT)</span>
+                        <span class="crypto-network">Сеть: TRC-20</span>
+                    </div>
+                    <input type="text" value="TXzwe7qXpZ68gCZvdABhooMnQVWBgAqNP8" readonly class="crypto-address">
+                    <button class="btn-copy" onclick="copyAddress(this, 'TXzwe7qXpZ68gCZvdABhooMnQVWBgAqNP8')">Копировать</button>
+                </div>
+
+                <!-- 3. Toncoin -->
+                <div class="crypto-card">
+                    <div class="crypto-info">
+                        <span class="crypto-name">Toncoin (TON)</span>
+                        <span class="crypto-network">Сеть: TON</span>
+                    </div>
+                    <input type="text" value="UQCMyGhN8qRSjoGq_0EOs1JUCg7qAUzlmgwXCAETWAQ9bv91" readonly class="crypto-address">
+                    <button class="btn-copy" onclick="copyAddress(this, 'UQCMyGhN8qRSjoGq_0EOs1JUCg7qAUzlmgwXCAETWAQ9bv91')">Копировать</button>
+                </div>
+
+                <!-- 4. Monero -->
+                <div class="crypto-card">
+                    <div class="crypto-info">
+                        <span class="crypto-name">Monero (XMR)</span>
+                        <span class="crypto-network">Сеть: Monero</span>
+                    </div>
+                    <input type="text" value="8A4xXHugyki9J16EY1RSnKeRbxicLj8z1DMpK2PEUxvD9MobFpEvYCBHuWSWkZoo9DLAnr7FhGbmaRMcP6pgyvcqBByTKJs" readonly class="crypto-address">
+                    <button class="btn-copy" onclick="copyAddress(this, '8A4xXHugyki9J16EY1RSnKeRbxicLj8z1DMpK2PEUxvD9MobFpEvYCBHuWSWkZoo9DLAnr7FhGbmaRMcP6pgyvcqBByTKJs')">Копировать</button>
+                </div>
+
+                <!-- 5. Ethereum -->
+                <div class="crypto-card">
+                    <div class="crypto-info">
+                        <span class="crypto-name">Ethereum (ETH)</span>
+                        <span class="crypto-network">Сеть: ERC-20</span>
+                    </div>
+                    <input type="text" value="0x94735d55b82822B94c61730aB380A4307947e157" readonly class="crypto-address">
+                    <button class="btn-copy" onclick="copyAddress(this, '0x94735d55b82822B94c61730aB380A4307947e157')">Копировать</button>
+                </div>
+
+                <!-- 6. Litecoin -->
+                <div class="crypto-card">
+                    <div class="crypto-info">
+                        <span class="crypto-name">Litecoin (LTC)</span>
+                        <span class="crypto-network">Сеть: Litecoin</span>
+                    </div>
+                    <input type="text" value="ltc1q2lmhnekfhy5vm0ymp0j8c3uce46dhn0ml9ym5a" readonly class="crypto-address">
+                    <button class="btn-copy" onclick="copyAddress(this, 'ltc1q2lmhnekfhy5vm0ymp0j8c3uce46dhn0ml9ym5a')">Копировать</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2026 Project «Svoboda». Свобода слова и информации.</p>
+        <p>Связь с разработчиком: <a href="https://t.me/svoboda_projec1" target="_blank" rel="noopener">Telegram-канал</a></p>
+    </footer>
+
+    <!-- Умный JavaScript для плавного скролла и копирования кошельков -->
+    <script>
+        // 1. Умное копирование с мгновенной анимацией кнопки
+        function copyAddress(button, text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.innerText;
+                button.innerText = 'Скопировано! ✓';
+                button.style.background = '#1fa2ff';
+                button.style.color = '#ffffff';
+                button.style.borderColor = '#1fa2ff';
+                
+                // Через 2 секунды возвращаем кнопку в дефолтное состояние
+                setTimeout(() => {
+                    button.innerText = originalText;
+                    button.style.background = '';
+                    button.style.color = '';
+                    button.style.borderColor = '';
+                }, 2000);
+            });
+        }
+
+        // 2. Плавная и красивая прокрутка до секций
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetID = this.getAttribute('href');
+                document.querySelector(targetID).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+/* Подключаем современный округлый шрифт */
+@import url('https://googleapis.com');
+
+:root {
+    --sky-blue: #1fa2ff;       /* Точный сочный синий с твоей картинки */
+    --sky-dark: #007acc;       /* Более глубокий синий для кнопок при наведении */
+    --sky-light: #f0f8ff;      /* Мягкий фоновый оттенок для подвала */
+    --bg-site: #ffffff;        
+    --text-dark: #0f172a;      
+    --text-muted: #64748b;     
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(180deg, #ffffff 0%, #f0f7ff 100%); /* Легкий воздушный градиент */
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+/* Яркая небесная шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%; /* Сделали шапку чуть тоньше */
+    background: linear-gradient(135deg, var(--sky-blue), #0ea5e9); 
+    box-shadow: 0 4px 20px rgba(56, 189, 248, 0.25);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Белый текст в шапке */
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: rgba(255, 255, 255, 0.85); 
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* Секции сайта — уменьшили вертикальные отступы с 90px до 50px */
+section {
+    padding: 50px 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Главный экран (Hero) — сделали компактнее */
+#hero {
+    text-align: center;
+    padding: 60px 8% 40px 8%;
+}
+
+#hero h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+    color: var(--sky-dark); 
+}
+
+#hero p {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto 15px auto; /* Уменьшили нижний отступ до 15px */
+}
+
+/* Блок загрузки приложения — теперь очень компактный */
+.download-container {
+    margin-bottom: 12px !important; /* Сильно сжали расстояние до блока "Скоро" */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Мощная кнопка «Скачать» цвета неба */
+.btn-main {
+    display: inline-block;
+    padding: 16px 40px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--sky-blue), var(--sky-dark));
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(31, 162, 255, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    margin-bottom: 10px !important; /* Версия теперь аккуратно под кнопкой */
+}
+
+.btn-main:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(31, 162, 255, 0.45);
+}
+
+.app-version {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Ожидание будущих версий для ПК */
+.coming-soon {
+    margin-top: 5px !important; /* Минимальный зазор под версией приложения */
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+}
+
+.badge {
+    background: #e0f2fe;
+    color: var(--sky-dark);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.disabled-os {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+/* Заголовки секций */
+h2 {
+    font-size: 2rem;
+    color: var(--sky-dark);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+/* Списки зеркал */
+.mirrors-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.mirrors-list li {
+    background: #ffffff;
+    margin-bottom: 10px;
+    padding: 14px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    border-left: 5px solid var(--sky-blue);
+    transition: transform 0.2s;
+}
+
+.mirrors-list li:hover {
+    transform: translateX(4px);
+}
+
+.mirrors-list a {
+    color: var(--sky-dark);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Карточки облачных хранилищ */
+.cloud-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.cloud-card {
+    background: #ffffff;
+    padding: 25px; /* Сделали карточки чуть плотнее */
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(56, 189, 248, 0.12); 
+    transition: all 0.3s ease;
+}
+
+.cloud-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.12);
+    border-color: var(--sky-blue);
+}
+
+.cloud-card h3 {
+    margin-bottom: 8px;
+    color: var(--sky-dark);
+    font-weight: 700;
+}
+
+.cloud-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.btn-link {
+    color: var(--sky-blue);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: inline-block;
+    transition: color 0.2s;
+}
+
+.btn-link:hover {
+    color: var(--sky-dark);
+}
+
+/* Подвал сайта — уменьшили верхний отступ */
+footer {
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    background: var(--sky-light);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--sky-dark);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Сетка для криптокошельков */
+.crypto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* Карточка кошелька */
+.crypto-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(56, 189, 248, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.crypto-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.crypto-name {
+    font-weight: 800;
+    color: var(--sky-dark);
+    font-size: 1.1rem;
+}
+
+.crypto-network {
+    font-size: 0.8rem;
+    background: #e0f2fe;
+    color: var(--sky-dark);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* Строка с адресом */
+.crypto-address {
+    width: 100%;
+    padding: 10px 12px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    outline: none;
+}
+
+/* Фирменная синяя кнопка копирования */
+.btn-copy {
+    width: 100%;
+    padding: 10px;
+    background: #f0f9ff; /* Светло-голубой воздушный фон */
+    border: 1px solid #bae6fd; /* Нежная синяя рамка */
+    color: var(--sky-blue); /* Фирменный синий текст */
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease !important; /* Делает смену текста и цвета плавной */
+}
+
+.btn-copy:hover {
+    background: var(--sky-blue); /* Кнопка заливается вашим синим цветом */
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(31, 162, 255, 0.3);
+}
